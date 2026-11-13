@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pianna — pilihan fashion Bangkok yang cute, fresh, dan stylish.">
+<title>Pianna — Bangkok Fashion Finds</title>
+<style>
+:root{--pink:#f5b9c9;--rose:#e88ca8;--cream:#fffaf4;--ink:#493b3d;--muted:#88777a;--lilac:#eee7f8;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.announcement{background:#f7dce4;text-align:center;padding:10px 16px;font-size:12px;letter-spacing:1.3px;color:#79515d}
+header{max-width:1160px;margin:auto;padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:Georgia,serif;font-size:34px;font-weight:bold;letter-spacing:2px;color:#bd6e89}.logo span{color:#d9a9b8}
+nav{display:flex;gap:26px;font-size:13px;color:#6e5c60}nav a:hover{color:#c56e8c}
+.pill{display:inline-block;background:var(--rose);color:white;padding:13px 21px;border-radius:30px;font-size:12px;font-weight:bold;letter-spacing:.5px;transition:.2s}.pill:hover{transform:translateY(-2px);background:#d97896}
+.hero{max-width:1160px;margin:10px auto 65px;padding:0 5%;display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.hero-copy .eyebrow{color:#c17891;letter-spacing:3px;font-size:11px;font-weight:bold}.hero h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,70px);line-height:1.04;font-weight:normal;margin:17px 0}.hero h1 em{color:#c97996;font-weight:normal}.hero p{line-height:1.8;color:var(--muted);max-width:440px;font-size:15px;margin-bottom:28px}
+.hero-art{min-height:410px;border-radius:48% 48% 25px 25px;background:linear-gradient(145deg,#f5dce4,#eee7f8);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;background:#fff8;}.hero-art:before{width:250px;height:250px;top:-60px;right:-40px}.hero-art:after{width:170px;height:170px;bottom:-50px;left:-25px}
+.fashion-card{position:relative;z-index:1;width:64%;height:300px;border-radius:150px 150px 24px 24px;background:linear-gradient(160deg,#d89eae,#f5d7df 60%,#c5b6d9);display:flex;align-items:center;justify-content:center;box-shadow:0 20px 45px #a77d8c35}
+.fashion-card .dress{font-size:125px;filter:drop-shadow(0 12px 9px #8d647455)}.sparkle{position:absolute;font-size:30px;color:white}.s1{top:18%;left:16%}.s2{right:15%;bottom:22%}.hero-note{position:absolute;z-index:2;bottom:25px;right:22px;background:white;padding:13px 17px;border-radius:18px;font-family:Georgia,serif;font-size:15px;box-shadow:0 8px 25px #7c5b6720}
+.section{padding:65px 5%;}.section-inner{max-width:1080px;margin:auto}.section-head{text-align:center;margin-bottom:35px}.kicker{color:#c17891;font-size:11px;letter-spacing:3px;font-weight:bold}.section h2{font-family:Georgia,serif;font-weight:normal;font-size:38px;margin:10px 0}.section-head p{color:var(--muted);font-size:14px}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.category{padding:30px 20px;border-radius:22px;text-align:center;background:#f7e8ed}.category:nth-child(2){background:#eee9f7}.category:nth-child(3){background:#f5eedf}.category .emoji{font-size:42px}.category h3{font-family:Georgia,serif;font-weight:normal;font-size:22px;margin:13px 0 7px}.category p{font-size:13px;color:var(--muted);margin:0}
+.products{background:#fff}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product{border:1px solid #f1e6e7;border-radius:20px;overflow:hidden;background:#fff}.product-art{height:220px;display:flex;align-items:center;justify-content:center;font-size:78px;background:#f8e8ed}.product:nth-child(2) .product-art{background:#eee9f7}.product:nth-child(3) .product-art{background:#f6efdf}.product-info{padding:18px}.product-info h3{font-family:Georgia,serif;font-size:19px;font-weight:normal;margin:0 0 7px}.product-info p{color:var(--muted);font-size:12px;line-height:1.6;margin:0 0 14px}.tag{font-size:10px;letter-spacing:1px;color:#bd6e89;background:#fbedf1;border-radius:20px;padding:7px 10px;display:inline-block}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}.about-art{min-height:270px;border-radius:28px;background:linear-gradient(135deg,#f4dce4,#e9e2f3);display:flex;align-items:center;justify-content:center;font-size:95px}.about h2{font-family:Georgia,serif;font-size:38px;font-weight:normal;margin:12px 0}.about p{color:var(--muted);font-size:14px;line-height:1.9}
+.contact{background:#f7e8ed;text-align:center}.contact .section-head{margin-bottom:24px}.contact-details{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:25px 0}.contact-chip{background:#fff;border-radius:18px;padding:15px 19px;font-size:13px;color:#705e62}.contact-chip strong{display:block;color:#bd6e89;margin-bottom:5px;font-size:11px;letter-spacing:1px}
+footer{padding:28px 5%;text-align:center;color:#927f84;font-size:12px;line-height:1.8}.footer-logo{font-family:Georgia,serif;font-size:25px;color:#bd6e89;margin-bottom:6px}
+@media(max-width:760px){header{flex-wrap:wrap}nav{order:3;width:100%;justify-content:center;gap:18px}.hero{grid-template-columns:1fr;margin-top:0;gap:25px}.hero-art{min-height:330px}.fashion-card{height:245px}.categories,.product-grid{grid-template-columns:1fr}.category{padding:24px}.product-art{height:190px}.about{grid-template-columns:1fr}.section{padding:52px 6%}.hero{padding:0 6%}}
+</style>
+</head>
+<body>
+<div class="announcement">♡ BANGKOK FASHION FINDS • CUTE STYLE, HAPPY YOU ♡</div>
+<header>
+  <a class="logo" href="#home">pianna<span>.</span></a>
+  <nav><a href="#home">Home</a><a href="#kategori">Kategori</a><a href="#koleksi">Koleksi</a><a href="#about">Tentang</a><a href="#kontak">Kontak</a></nav>
+  <a class="pill" href="https://wa.me/6283137582326" target="_blank" rel="noopener">CHAT KAMI ↗</a>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow">HELLO, FASHION LOVERS!</div>
+    <h1>Little things,<br><em>lovely</em> outfits.</h1>
+    <p>Temukan pilihan fashion Bangkok yang lucu, fresh, dan bikin hari-harimu makin berwarna. Pianna hadir untuk menemani gaya manis dan percaya dirimu.</p>
+    <a class="pill" href="#koleksi">EXPLORE COLLECTION →</a>
+  </div>
+  <div class="hero-art"><span class="sparkle s1">✦</span><div class="fashion-card"><span class="dress">👗</span></div><span class="sparkle s2">✧</span><div class="hero-note">made for your lovely days ♡</div></div>
+</section>
+<section class="section" id="kategori">
+ <div class="section-inner">
+  <div class="section-head"><div class="kicker">FIND YOUR FAVOURITE</div><h2>Shop by category</h2><p>Pilihan manis untuk setiap suasana.</p></div>
+  <div class="categories">
+   <div class="category"><div class="emoji">🎀</div><h3>Sweet Tops</h3><p>Atasan cute untuk daily look.</p></div>
+   <div class="category"><div class="emoji">🌷</div><h3>Lovely Dresses</h3><p>Dress cantik untuk hari spesial.</p></div>
+   <div class="category"><div class="emoji">🧸</div><h3>Daily Essentials</h3><p>Fashion simpel yang mudah dipadu-padankan.</p></div>
+  </div>
+ </div>
+</section>
+<section class="section products" id="koleksi">
+ <div class="section-inner">
+  <div class="section-head"><div class="kicker">PIANNA PICKS</div><h2>Lovely collection</h2><p>Inspirasi koleksi fashion pilihan dari Bangkok.</p></div>
+  <div class="product-grid">
+   <article class="product"><div class="product-art">👚</div><div class="product-info"><span class="tag">DAILY FAVOURITE</span><h3>Soft Girl Top</h3><p>Atasan manis untuk tampilan santai dan effortless.</p></div></article>
+   <article class="product"><div class="product-art">👗</div><div class="product-info"><span class="tag">PRETTY MOMENT</span><h3>Blooming Dress</h3><p>Dress feminin dengan sentuhan gaya yang playful.</p></div></article>
+   <article class="product"><div class="product-art">👜</div><div class="product-info"><span class="tag">CUTE ACCESSORY</span><h3>Lovely Little Bag</h3><p>Pelengkap outfit supaya gayamu makin charming.</p></div></article>
+  </div>
+ </div>
+</section>
+<section class="section" id="about">
+ <div class="section-inner about">
+  <div class="about-art">🌸🛍️🎀</div>
+  <div><div class="kicker">A LITTLE ABOUT US</div><h2>From Bangkok<br>with love.</h2><p>Pianna adalah brand fashion yang menghadirkan pilihan baju dan item fashion lucu dari Bangkok untuk kamu di Indonesia. Kami percaya setiap orang punya gaya unik—dan outfit yang tepat bisa membuat hari terasa lebih istimewa.</p><p><strong>Pianna — your little happy place for fashion.</strong></p></div>
+ </div>
+</section>
+<section class="section contact" id="kontak">
+ <div class="section-inner">
+  <div class="section-head"><div class="kicker">LET'S BE FRIENDS</div><h2>Say hello to Pianna!</h2><p>Mau tanya koleksi, kerja sama, atau pemesanan? Hubungi kami ya ♡</p></div>
+  <div class="contact-details">
+   <div class="contact-chip"><strong>WHATSAPP</strong>083137582326</div>
+   <div class="contact-chip"><strong>EMAIL</strong>piiannapii@gmail.com</div>
+   <div class="contact-chip"><strong>LOCATION</strong>Sukoharjo, Jawa Tengah</div>
+  </div>
+  <a class="pill" href="https://wa.me/6283137582326?text=Halo%20Pianna%2C%20aku%20mau%20tanya%20koleksi%20fashion-nya." target="_blank" rel="noopener">CONTACT PIANNA ↗</a>
+ </div>
+</section>
+</main>
+<footer><div class="footer-logo">pianna.</div>Bangkok fashion finds, picked with love ♡<br>© 2026 Pianna. All rights reserved.<br>Sukoharjo, Jawa Tengah, Indonesia</footer>
+</body>
+</html>
